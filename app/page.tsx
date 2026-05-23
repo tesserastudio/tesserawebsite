@@ -6,6 +6,8 @@ import { Process } from "@/components/sections/Process";
 import { Services } from "@/components/sections/Services";
 import { Testimonials } from "@/components/sections/Testimonials";
 import { WhyTessera } from "@/components/sections/WhyTessera";
+import { FAQ } from "@/components/sections/FAQ";
+import { WhoWeWorkWith } from "@/components/sections/WhoWeWorkWith";
 
 export default function Home() {
   return (
@@ -13,10 +15,12 @@ export default function Home() {
       <Hero />
       <MarqueeTrust />
       <Services />
+      <Process />
+      <WhoWeWorkWith />
       <Portfolio />
       <WhyTessera />
-      <Process />
       <Testimonials />
+      <FAQ />
       <FinalCTA />
     </>
   );

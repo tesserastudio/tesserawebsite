@@ -6,7 +6,7 @@ import { Reveal } from "@/components/ui/Reveal";
 
 export function FinalCTA() {
   return (
-    <section id="contact" className="section-padding relative overflow-hidden">
+    <section id="contact" className="scroll-mt-32 section-padding relative overflow-hidden">
       <GlowOrb className="-left-20 top-24 h-72 w-72" color="violet" />
       <GlowOrb className="-right-10 bottom-20 h-80 w-80" color="blue" delay={1} />
       <div className="site-container relative z-10">
@@ -14,10 +14,13 @@ export function FinalCTA() {
           <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
             <Reveal>
               <p className="eyebrow">Start the build</p>
-              <h2 className="mt-6 font-display text-4xl font-bold leading-tight tracking-[-0.05em] sm:text-5xl lg:text-6xl">
-                Your business deserves more than just a website.
+              <h2 className="mt-6 font-display text-4xl font-bold leading-tight tracking-[-0.05em] sm:text-5xl lg:text-6xl text-white">
+                Contact Tessera Studio
               </h2>
-              <p className="mt-6 text-lg leading-8 text-white/[0.62]">
+              <p className="mt-6 text-xl font-semibold text-white/90">
+                Your business deserves more than just a website.
+              </p>
+              <p className="mt-4 text-lg leading-8 text-white/[0.62]">
                 Build your brand, automate growth and scale faster with Tessera Studio. Send the rough
                 version of the idea; we will help shape it into something launchable.
               </p>

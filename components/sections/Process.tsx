@@ -7,7 +7,7 @@ import { SectionHeading } from "@/components/ui/SectionHeading";
 
 export function Process() {
   return (
-    <section id="process" className="section-padding relative overflow-hidden">
+    <section id="process" className="scroll-mt-32 section-padding relative overflow-hidden">
       <div className="absolute inset-x-0 bottom-0 h-80 bg-gradient-to-t from-violet/10 to-transparent" />
       <div className="site-container relative z-10">
         <Reveal>
@@ -15,10 +15,10 @@ export function Process() {
             eyebrow="How it works"
             title={
               <>
-                A clean path from <span className="gradient-text">idea to scale.</span>
+                Our <span className="gradient-text">Process</span>
               </>
             }
-            description="A fast, structured workflow keeps the premium parts premium and the launch parts calm. Nice little luxury, that."
+            description="A clean, structured path from idea to scale keeps the premium parts premium and the launch parts calm."
           />
         </Reveal>
 

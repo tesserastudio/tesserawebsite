@@ -1,6 +1,7 @@
 export type InquiryPayload = {
   name?: unknown;
   email?: unknown;
+  mobile?: unknown;
   company?: unknown;
   service?: unknown;
   budget?: unknown;
@@ -10,6 +11,7 @@ export type InquiryPayload = {
 export type Inquiry = {
   name: string;
   email: string;
+  mobile: string;
   company: string;
   service: string;
   budget: string;
@@ -42,6 +44,7 @@ export function validateInquiry(payload: InquiryPayload | null):
   const data: Inquiry = {
     name: asString(payload.name),
     email: asString(payload.email).toLowerCase(),
+    mobile: asString(payload.mobile),
     company: asString(payload.company),
     service: asString(payload.service) || "General growth project",
     budget: asString(payload.budget) || "Not specified",
@@ -52,6 +55,16 @@ export function validateInquiry(payload: InquiryPayload | null):
 
   if (data.name.length < 2) fields.name = "Please add your name.";
   if (!emailPattern.test(data.email)) fields.email = "Please use a valid email address.";
+  
+  if (!data.mobile) {
+    fields.mobile = "Please enter your mobile number.";
+  } else {
+    const phonePattern = /^[+\d\s().-]{7,18}$/;
+    if (!phonePattern.test(data.mobile)) {
+      fields.mobile = "Please enter a valid mobile number.";
+    }
+  }
+
   if (data.company.length < 2) fields.company = "Please add your company or brand name.";
   if (data.message.length < 10) fields.message = "Tell us a little more about the project.";
 

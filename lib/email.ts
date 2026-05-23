@@ -42,6 +42,7 @@ function detailRows(inquiry: StoredInquiry) {
   return [
     { label: "Name", value: inquiry.name },
     { label: "Email", value: inquiry.email },
+    { label: "Mobile Number", value: inquiry.mobile },
     { label: "Company", value: inquiry.company },
     { label: "Service", value: inquiry.service },
     { label: "Budget", value: inquiry.budget },

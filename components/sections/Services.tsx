@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { motion } from "framer-motion";
 import { services } from "@/lib/data";
 import { Reveal } from "@/components/ui/Reveal";
@@ -49,14 +50,14 @@ function ServiceIcon({ type }: { type: string }) {
 
 export function Services() {
   return (
-    <section id="services" className="section-padding relative">
+    <section id="services" className="scroll-mt-32 section-padding relative">
       <div className="site-container">
         <Reveal>
           <SectionHeading
-            eyebrow="What we build"
+            eyebrow="What We Build"
             title={
               <>
-                Services that connect <span className="gradient-text">brand, web and growth.</span>
+                Services that connect <span className="gradient-text">brand, web and growth</span>
               </>
             }
             description="Every offer is designed as part of one system: sharpen the brand, convert the website, automate the follow-up and scale the demand engine."
@@ -69,37 +70,49 @@ export function Services() {
               <motion.article
                 whileHover={{ y: -8, scale: 1.01 }}
                 transition={{ type: "spring", stiffness: 260, damping: 22 }}
-                className="tile-corner glass-card group h-full rounded-[2rem] p-6 transition duration-300 hover:border-violet/50 hover:shadow-glow"
+                className="tile-corner glass-card group h-full rounded-[2rem] p-6 transition duration-300 hover:border-violet/50 hover:shadow-glow flex flex-col justify-between"
               >
-                <div className="relative z-10 flex items-start justify-between gap-5">
-                  <div className="grid h-16 w-16 place-items-center rounded-3xl border border-white/[0.08] bg-white/[0.045]">
-                    <ServiceIcon type={service.icon} />
+                <div>
+                  <div className="relative z-10 flex items-start justify-between gap-5">
+                    <div className="grid h-16 w-16 place-items-center rounded-3xl border border-white/[0.08] bg-white/[0.045]">
+                      <ServiceIcon type={service.icon} />
+                    </div>
+                    {service.badge ? (
+                      <span className="rounded-full border border-violet/40 bg-violet/15 px-3 py-1 font-mono text-xs text-violet">
+                        {service.badge}
+                      </span>
+                    ) : null}
                   </div>
-                  {service.badge ? (
-                    <span className="rounded-full border border-violet/40 bg-violet/15 px-3 py-1 font-mono text-xs text-violet">
-                      {service.badge}
-                    </span>
-                  ) : null}
+
+                  <div className="relative z-10 mt-7">
+                    <p className="font-mono text-xs uppercase tracking-[0.2em] text-white/[0.42]">
+                      {service.eyebrow}
+                    </p>
+                    <h2 className="mt-3 font-display text-2xl font-bold tracking-[-0.03em] text-white">
+                      {service.title}
+                    </h2>
+                    <p className="mt-4 leading-7 text-white/[0.58]">{service.description}</p>
+                  </div>
+
+                  <ul className="relative z-10 mt-7 grid gap-3 sm:grid-cols-2">
+                    {service.features.map((feature) => (
+                      <li key={feature} className="flex items-center gap-3 text-sm text-white/[0.68]">
+                        <span className="h-1.5 w-1.5 rounded-full bg-gradient-to-r from-violet to-electric" />
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
                 </div>
 
-                <div className="relative z-10 mt-7">
-                  <p className="font-mono text-xs uppercase tracking-[0.2em] text-white/[0.42]">
-                    {service.eyebrow}
-                  </p>
-                  <h3 className="mt-3 font-display text-2xl font-bold tracking-[-0.03em]">
-                    {service.title}
-                  </h3>
-                  <p className="mt-4 leading-7 text-white/[0.58]">{service.description}</p>
+                <div className="relative z-10 mt-8 pt-4 border-t border-white/[0.05]">
+                  <Link
+                    href={service.href || "/"}
+                    className="inline-flex items-center gap-2 text-xs font-mono tracking-wider uppercase text-violet transition hover:text-white group-hover:translate-x-1 duration-300"
+                  >
+                    Learn about our {service.title.split(" ")[0].toLowerCase()} services
+                    <span className="transition-transform duration-300 group-hover:translate-x-1">→</span>
+                  </Link>
                 </div>
-
-                <ul className="relative z-10 mt-7 grid gap-3 sm:grid-cols-2">
-                  {service.features.map((feature) => (
-                    <li key={feature} className="flex items-center gap-3 text-sm text-white/[0.68]">
-                      <span className="h-1.5 w-1.5 rounded-full bg-gradient-to-r from-violet to-electric" />
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
               </motion.article>
             </Reveal>
           ))}

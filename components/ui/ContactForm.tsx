@@ -7,6 +7,7 @@ import { cn } from "@/lib/utils";
 type FormState = {
   name: string;
   email: string;
+  mobile: string;
   company: string;
   service: string;
   budget: string;
@@ -23,6 +24,7 @@ type ApiResponse = {
 const initialForm: FormState = {
   name: "",
   email: "",
+  mobile: "",
   company: "",
   service: "Website Design & Development",
   budget: "₹40K – ₹60K",
@@ -210,6 +212,19 @@ export function ContactForm() {
         </label>
 
         <label className="grid gap-2 text-sm text-white/[0.62]">
+          Mobile Number
+          <input
+            className={cn(inputClass, fieldErrors.mobile && "border-red-400/70")}
+            value={form.mobile}
+            onChange={(event) => updateField("mobile", event.target.value)}
+            placeholder="Enter your mobile number"
+            type="tel"
+            autoComplete="tel"
+          />
+          {fieldErrors.mobile ? <span className="text-xs text-red-300">{fieldErrors.mobile}</span> : null}
+        </label>
+
+        <label className="grid gap-2 text-sm text-white/[0.62]">
           Company
           <input
             className={cn(inputClass, fieldErrors.company && "border-red-400/70")}
@@ -232,7 +247,7 @@ export function ContactForm() {
           />
         </label>
 
-        <label className="grid gap-2 text-sm text-white/[0.62] sm:col-span-2">
+        <label className="grid gap-2 text-sm text-white/[0.62]">
           Budget range
           <CustomSelect
             value={form.budget}

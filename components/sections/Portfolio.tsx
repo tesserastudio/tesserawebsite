@@ -11,67 +11,72 @@ const projects = [
   {
     id: 1,
     name: "Urban Nest Realty",
+    slug: "urban-nest-realty",
     industry: "Real Estate",
-    tagline: "Premium property showcase that converts high-intent buyers.",
+    tagline: "Premium property showcase designed to convert high-intent buyers in Andhra Pradesh with a seamless WhatsApp enquiry flow.",
     gradient: "from-[#1a1a2e] via-[#16213e] to-[#0f3460]",
     accent: "from-violet/40 to-electric/20",
     tag: "Web Design",
     icon: "🏛️",
     featured: true,
-    image: "/images/portfolio/real_estate_premium.png",
-    link: "#",
+    image: "/images/portfolio/tessera-studio-website-development-chittoor.png",
+    link: "/work/urban-nest-realty",
   },
   {
     id: 2,
     name: "Bloom Table Café",
+    slug: "bloom-table-campaign",
     industry: "Restaurant & F&B",
-    tagline: "Social-first campaign system built for repeat footfall.",
+    tagline: "Social-first campaign system and localized cafe website built to drive repeat weekday traffic in South India.",
     gradient: "from-[#1a0e0e] via-[#2d1515] to-[#1a0a0a]",
     accent: "from-rose-500/30 to-orange-500/20",
     tag: "Digital Marketing",
     icon: "☕",
     featured: false,
-    image: "/images/portfolio/cafe_premium.png",
-    link: "#",
+    image: "/images/portfolio/tessera-studio-cafe-marketing-chittoor.png",
+    link: "/work/bloom-table-campaign",
   },
   {
     id: 3,
     name: "Lattice Atelier",
+    slug: "lattice-brand-system",
     industry: "Branding",
-    tagline: "Visual identity built to look established from day one.",
+    tagline: "Expressive visual identity design and responsive logo marks built to establish a premium brand from day one.",
     gradient: "from-[#0d0d1a] via-[#12122a] to-[#0a0a1f]",
     accent: "from-violet/50 to-fuchsia-500/30",
     tag: "Brand Identity",
     icon: "◈",
     featured: false,
-    image: "/images/portfolio/brand_identity_premium.png",
-    link: "#",
+    image: "/images/portfolio/tessera-studio-brand-identity-system.png",
+    link: "/work/lattice-brand-system",
   },
   {
     id: 4,
     name: "OrbitStack",
+    slug: "orbitstack-launch",
     industry: "Startup / SaaS",
-    tagline: "Launch-ready landing page with 41% demo conversion lift.",
+    tagline: "Conversion-optimized startup landing page driving 41% demo conversion lift with highly interactive UI flows.",
     gradient: "from-[#0a1628] via-[#0e1f3d] to-[#071020]",
     accent: "from-electric/40 to-sky-500/20",
     tag: "Web + Branding",
     icon: "⬡",
     featured: true,
-    image: "/images/portfolio/saas_dashboard_premium.png",
-    link: "#",
+    image: "/images/portfolio/tessera-studio-saas-branding-and-design.png",
+    link: "/work/orbitstack-launch",
   },
   {
     id: 5,
     name: "Northline AI Receptionist",
+    slug: "always-on-ai-receptionist",
     industry: "AI Automation",
-    tagline: "24/7 lead response system that reduced manual follow-up by 58%.",
+    tagline: "Automated clinic follow-up and 24/7 lead qualification system reducing manual follow-up load by 58%.",
     gradient: "from-[#0a1a0a] via-[#0d1f0d] to-[#071207]",
     accent: "from-emerald-500/30 to-electric/20",
     tag: "AI Automation",
     icon: "◎",
     featured: false,
-    image: "/images/portfolio/ai_automation_premium.png",
-    link: "#",
+    image: "/images/portfolio/tessera-studio-ai-automation-services.png",
+    link: "/work/always-on-ai-receptionist",
   },
 ];
 
@@ -100,7 +105,7 @@ function PortfolioCard({ project, index }: { project: (typeof projects)[0]; inde
             <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/50 z-10" />
             <Image 
               src={project.image}
-              alt={project.name}
+              alt={`${project.name} - ${project.industry} system by Tessera Studio`}
               fill
               className="object-cover transition-transform duration-700 group-hover:scale-105"
             />
@@ -126,7 +131,7 @@ function PortfolioCard({ project, index }: { project: (typeof projects)[0]; inde
                 </p>
               </div>
               {/* Arrow CTA */}
-              <Link href={project.link} target="_blank">
+              <Link href={project.link}>
                 <motion.div
                   className="flex-shrink-0 flex h-9 w-9 items-center justify-center rounded-full border border-white/[0.12] bg-white/[0.05] text-white/50 transition-all duration-300 group-hover:border-white/30 group-hover:bg-white/[0.1] group-hover:text-white"
                   whileHover={{ scale: 1.1 }}
@@ -150,7 +155,7 @@ export function Portfolio() {
   const rest = projects.filter((p) => !p.featured);
 
   return (
-    <section id="portfolio" className="section-padding relative overflow-hidden">
+    <section id="portfolio" className="scroll-mt-32 section-padding relative overflow-hidden">
       {/* Background glow */}
       <div className="absolute inset-x-0 top-1/3 h-[500px] bg-radial-violet opacity-40 blur-3xl pointer-events-none" />
 
@@ -161,7 +166,7 @@ export function Portfolio() {
             eyebrow="Selected work"
             title={
               <>
-                Our <span className="gradient-text">portfolio.</span>
+                Our <span className="gradient-text">Portfolio</span>
               </>
             }
             description="A snapshot of the brands and systems we've built — spanning web, identity, marketing and AI."
@@ -185,13 +190,13 @@ export function Portfolio() {
         {/* Bottom CTA strip */}
         <Reveal delay={0.35}>
           <div className="mt-12 flex items-center justify-center">
-            <a
-              href="/#contact"
+            <Link
+              href="/contact"
               className="group inline-flex items-center gap-2.5 rounded-full border border-white/[0.12] bg-white/[0.04] px-6 py-3 text-sm font-medium text-white/70 backdrop-blur transition-all duration-300 hover:border-white/25 hover:bg-white/[0.08] hover:text-white"
             >
               Start your project
               <span className="transition-transform duration-300 group-hover:translate-x-1">→</span>
-            </a>
+            </Link>
           </div>
         </Reveal>
       </div>

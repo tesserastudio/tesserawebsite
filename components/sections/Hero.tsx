@@ -5,6 +5,7 @@ import { ParticleField } from "@/components/3d/ParticleField";
 import { FloatingCard } from "@/components/ui/FloatingCard";
 import { GlowOrb } from "@/components/ui/GlowOrb";
 import { MagneticButton } from "@/components/ui/MagneticButton";
+import { usePathname } from "next/navigation";
 
 const headline = "We build brands, websites & growth systems that scale businesses.";
 
@@ -105,6 +106,20 @@ function HeroVisual() {
 }
 
 export function Hero() {
+  const pathname = usePathname();
+
+  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    if (href.startsWith("/#") && pathname === "/") {
+      e.preventDefault();
+      const id = href.replace("/#", "");
+      const element = document.getElementById(id);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+        window.history.pushState(null, "", href);
+      }
+    }
+  };
+
   return (
     <section className="relative min-h-screen overflow-hidden pb-20 pt-36 sm:pt-40">
       <div className="absolute left-1/2 top-0 h-[36rem] w-[72rem] -translate-x-1/2 rounded-full bg-gradient-to-r from-violet/20 via-electric/15 to-transparent blur-3xl" />
@@ -135,8 +150,7 @@ export function Hero() {
             transition={{ duration: 0.7, delay: 1.05 }}
             className="mt-7 max-w-2xl text-lg leading-8 text-white/[0.62] sm:text-xl"
           >
-            Tessera Studio blends premium design, growth marketing and AI automation into one clean
-            system, so your business looks sharper and scales faster.
+            Tessera Studio blends premium design, growth marketing and AI automation into one clean system, so your business looks sharper and scales faster.
           </motion.p>
 
           <motion.div
@@ -145,11 +159,20 @@ export function Hero() {
             transition={{ duration: 0.7, delay: 1.18 }}
             className="mt-9 flex flex-col gap-4 sm:flex-row"
           >
-            <MagneticButton href="#contact" size="lg">
-              Book a Call
-            </MagneticButton>
-            <MagneticButton href="#portfolio" variant="secondary" size="lg">
+            <MagneticButton
+              href="/#portfolio"
+              size="lg"
+              onClick={(e) => handleNavClick(e as any, "/#portfolio")}
+            >
               View Projects
+            </MagneticButton>
+            <MagneticButton
+              href="/#contact"
+              variant="secondary"
+              size="lg"
+              onClick={(e) => handleNavClick(e as any, "/#contact")}
+            >
+              Book a Call
             </MagneticButton>
           </motion.div>
 

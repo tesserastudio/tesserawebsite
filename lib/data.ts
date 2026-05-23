@@ -40,15 +40,8 @@ export const services = [
     description:
       "High-performance websites, landing pages and e-commerce experiences built to look premium and convert cleanly.",
     features: ["Business websites", "Landing pages", "E-commerce", "Custom development"],
-    icon: "browser"
-  },
-  {
-    title: "Branding & Design",
-    eyebrow: "Identity systems",
-    description:
-      "Distinctive visual identities, social systems and creative direction that make your brand easier to remember.",
-    features: ["Logo design", "Brand identity", "Social creatives", "Visual systems"],
-    icon: "diamond"
+    icon: "browser",
+    href: "/website-development-bangalore"
   },
   {
     title: "Digital Marketing",
@@ -56,16 +49,27 @@ export const services = [
     description:
       "Campaign strategy, lead funnels and content systems for brands that need predictable growth, not random spikes.",
     features: ["Social Ads", "Lead generation", "Social growth", "Funnel creation"],
-    icon: "target"
+    icon: "target",
+    href: "/lead-generation-systems"
+  },
+  {
+    title: "Branding & Design",
+    eyebrow: "Identity systems",
+    description:
+      "Distinctive visual identities, social systems and creative direction that make your brand easier to remember.",
+    features: ["Logo design", "Brand identity", "Social creatives", "Visual systems"],
+    icon: "diamond",
+    href: "/branding-services"
   },
   {
     title: "AI Automation",
-    eyebrow: "New",
+    eyebrow: "Intelligent Systems",
     description:
       "AI receptionists, follow-up workflows and CRM automations that remove manual work from your growth machine.",
     features: ["AI receptionists", "Lead follow-up", "CRM workflows", "Process automation"],
     icon: "network",
-    badge: "NEW"
+    badge: "NEW",
+    href: "/ai-automation-services"
   }
 ];
 
@@ -76,9 +80,10 @@ export const caseStudies = [
     category: "Web Design",
     metric: "+62% qualified inquiries",
     visual: "architecture",
-    client: "Urban Nest Realty",
+    image: "/images/portfolio/tessera-studio-website-development-chittoor.png",
+    client: "Urban Nest Realty (Real Estate)",
     summary:
-      "A premium property showcase and inquiry funnel designed to make a growing brokerage feel more established and convert higher-intent buyers.",
+      "A premium real estate website designed in Andhra Pradesh to showcase heritage, amenities, portfolio, digital brochure, and WhatsApp enquiry flow.",
     overview:
       "Urban Nest needed a site that matched the trust level of its inventory. We redesigned the positioning, built a cleaner property discovery experience and tightened the inquiry flow for higher-quality lead capture.",
     services: ["Positioning", "UX design", "Web development", "Lead optimization"],
@@ -101,9 +106,10 @@ export const caseStudies = [
     category: "Digital Marketing",
     metric: "3.8x campaign ROAS",
     visual: "campaign",
-    client: "Bloom Table Cafe",
+    image: "/images/portfolio/tessera-studio-cafe-marketing-chittoor.png",
+    client: "Bloom Table Cafe (Restaurant & F&B)",
     summary:
-      "A campaign system for a neighborhood cafe that needed stronger weekday traffic and more repeat customer momentum.",
+      "A localized marketing campaign and responsive café site built to drive weekday traffic and repeat footfall in South India.",
     overview:
       "Bloom Table had solid footfall but weak campaign structure. We built a creative system, localized ad messaging and a tighter offer ladder for repeat visits.",
     services: ["Campaign strategy", "Creative direction", "Paid social", "Offer funnel"],
@@ -126,9 +132,10 @@ export const caseStudies = [
     category: "Web + Branding",
     metric: "41% demo conversion lift",
     visual: "saas",
-    client: "OrbitStack",
+    image: "/images/portfolio/tessera-studio-saas-branding-and-design.png",
+    client: "OrbitStack (Startup / SaaS)",
     summary:
-      "A sharper SaaS launch page and brand system for a product that needed stronger message clarity before paid acquisition.",
+      "A conversion-focused landing page and modern brand system built for clear product positioning and demo lead capture.",
     overview:
       "OrbitStack had a capable product and a fuzzy story. We clarified the value prop, designed a cleaner interface narrative and rebuilt the landing page around demo conversion.",
     services: ["Messaging", "Brand system", "Landing page design", "Front-end build"],
@@ -151,9 +158,10 @@ export const caseStudies = [
     category: "AI Automation",
     metric: "24/7 lead response",
     visual: "chat",
-    client: "Northline Clinics",
+    image: "/images/portfolio/tessera-studio-ai-automation-services.png",
+    client: "Northline Clinics (Healthcare)",
     summary:
-      "An AI-first response workflow that qualified inbound leads, answered common questions and handed clean context to the human team.",
+      "An automated AI receptionist and qualified WhatsApp follow-up workflow to handle clinic enquiries 24/7.",
     overview:
       "Northline was losing time to manual follow-up and missed evening inquiries. We designed an AI receptionist flow that could respond instantly and escalate cleanly.",
     services: ["Conversation design", "Automation logic", "CRM workflow", "Ops handoff"],
@@ -176,9 +184,10 @@ export const caseStudies = [
     category: "Branding",
     metric: "Launch-ready visual system",
     visual: "identity",
-    client: "Lattice Atelier",
+    image: "/images/portfolio/tessera-studio-brand-identity-system.png",
+    client: "Lattice Atelier (Branding)",
     summary:
-      "A visual identity system built to make a new premium brand look established from day one across web, social and sales touchpoints.",
+      "Visual identity system built to establish a premium design brand from day one across web, social, and print assets.",
     overview:
       "Lattice Atelier needed a brand system with enough character to feel memorable but enough discipline to scale across channels without getting noisy.",
     services: ["Identity strategy", "Logo system", "Typography", "Launch toolkit"],
@@ -206,9 +215,9 @@ export const differentiators = [
 ];
 
 export const stats = [
-  { value: 15, suffix: "+", label: "Brands scaled" },
+  { value: 15, suffix: "+", label: "Brands scaled", decimals: 0 },
   { value: 3.2, suffix: "x", label: "Average ROI", decimals: 1 },
-  { value: 14, suffix: "-day", label: "Average delivery" }
+  { value: 14, suffix: "-day", label: "Average delivery", decimals: 0 }
 ];
 
 export const processSteps = [
