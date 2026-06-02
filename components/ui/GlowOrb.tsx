@@ -31,7 +31,7 @@ export function GlowOrb({ className, color = "violet", delay = 0 }: GlowOrbProps
       }}
       style={{ willChange: "opacity" }}
       className={cn(
-        "pointer-events-none absolute rounded-full blur-3xl",
+        "pointer-events-none absolute rounded-full blur-3xl z-[-1]",
         colors[color],
         className
       )}

@@ -5,87 +5,66 @@ import { Reveal } from "@/components/ui/Reveal";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import Image from "next/image";
 import Link from "next/link";
+import slvPortfolioImg from "@/assets/slv_portfolio_tsi.png";
+import ltPortfolioImg from "@/assets/lt_portfolio_tsi_1.png";
+import chettiarsImg from "@/assets/Chettiar Landing Page.png";
 
 /* ─── Project Data ──────────────────────────────────────────── */
 const projects = [
   {
     id: 1,
-    name: "Urban Nest Realty",
-    slug: "urban-nest-realty",
-    industry: "Real Estate",
-    tagline: "Premium property showcase designed to convert high-intent buyers in Andhra Pradesh with a seamless WhatsApp enquiry flow.",
+    name: "Sri Lakshmi Vallabha Constructions",
+    slug: "sri-lakshmi-vallabha-constructions",
+    industry: "Real Estate & Construction",
+    tagline: "Real-estate construction website designed to improve trust, showcase projects and drive brochure enquiries.",
     gradient: "from-[#1a1a2e] via-[#16213e] to-[#0f3460]",
     accent: "from-violet/40 to-electric/20",
+    tags: ["Web Design", "Development", "Lead Funnel"],
     tag: "Web Design",
     icon: "🏛️",
-    featured: true,
-    image: "/images/portfolio/tessera-studio-website-development-chittoor.png",
-    link: "/work/urban-nest-realty",
+    image: slvPortfolioImg,
+    link: "/work/sri-lakshmi-vallabha-constructions",
   },
   {
     id: 2,
-    name: "Bloom Table Café",
-    slug: "bloom-table-campaign",
-    industry: "Restaurant & F&B",
-    tagline: "Social-first campaign system and localized cafe website built to drive repeat weekday traffic in South India.",
-    gradient: "from-[#1a0e0e] via-[#2d1515] to-[#1a0a0a]",
-    accent: "from-rose-500/30 to-orange-500/20",
-    tag: "Digital Marketing",
-    icon: "☕",
-    featured: false,
-    image: "/images/portfolio/tessera-studio-cafe-marketing-chittoor.png",
-    link: "/work/bloom-table-campaign",
+    name: "Chettiar Sweet Stall",
+    slug: "chettiar-sweet-stall",
+    industry: "Traditional Food Brand",
+    tagline: "Traditional sweets brand reimagined with modern branding and a premium digital presence.",
+    gradient: "from-[#0a1628] via-[#0e1f3d] to-[#071020]",
+    accent: "from-electric/40 to-sky-500/20",
+    tags: ["Web Design", "Branding"],
+    tag: "Web Design",
+    icon: "⬡",
+    image: chettiarsImg,
+    link: "/work/chettiar-sweet-stall",
   },
   {
     id: 3,
-    name: "Lattice Atelier",
-    slug: "lattice-brand-system",
-    industry: "Branding",
-    tagline: "Expressive visual identity design and responsive logo marks built to establish a premium brand from day one.",
-    gradient: "from-[#0d0d1a] via-[#12122a] to-[#0a0a1f]",
-    accent: "from-violet/50 to-fuchsia-500/30",
-    tag: "Brand Identity",
-    icon: "◈",
-    featured: false,
-    image: "/images/portfolio/tessera-studio-brand-identity-system.png",
-    link: "/work/lattice-brand-system",
-  },
-  {
-    id: 4,
-    name: "OrbitStack",
-    slug: "orbitstack-launch",
-    industry: "Startup / SaaS",
-    tagline: "Conversion-optimized startup landing page driving 41% demo conversion lift with highly interactive UI flows.",
-    gradient: "from-[#0a1628] via-[#0e1f3d] to-[#071020]",
-    accent: "from-electric/40 to-sky-500/20",
-    tag: "Web + Branding",
-    icon: "⬡",
-    featured: true,
-    image: "/images/portfolio/tessera-studio-saas-branding-and-design.png",
-    link: "/work/orbitstack-launch",
-  },
-  {
-    id: 5,
-    name: "Northline AI Receptionist",
-    slug: "always-on-ai-receptionist",
-    industry: "AI Automation",
-    tagline: "Automated clinic follow-up and 24/7 lead qualification system reducing manual follow-up load by 58%.",
-    gradient: "from-[#0a1a0a] via-[#0d1f0d] to-[#071207]",
-    accent: "from-emerald-500/30 to-electric/20",
-    tag: "AI Automation",
+    name: "LaunchTable",
+    slug: "launchtable",
+    industry: "Startup / Community",
+    tagline: "Community-first digital campaigns crafted to build awareness, attract builders and drive founder engagement.",
+    gradient: "from-[#1a0e0e] via-[#2d1515] to-[#1a0a0a]",
+    accent: "from-rose-500/30 to-orange-500/20",
+    tags: ["Community Marketing", "Paid Social", "Founder Community"],
+    tag: "Community Marketing",
     icon: "◎",
-    featured: false,
-    image: "/images/portfolio/tessera-studio-ai-automation-services.png",
-    link: "/work/always-on-ai-receptionist",
+    image: ltPortfolioImg,
+    link: "/work/launchtable",
   },
 ];
 
 /* ─── Portfolio Card ────────────────────────────────────────── */
-function PortfolioCard({ project, index }: { project: (typeof projects)[0]; index: number }) {
-  const isFeatured = project.featured;
-
+function PortfolioCard({
+  project,
+  index,
+}: {
+  project: (typeof projects)[0];
+  index: number;
+}) {
   return (
-    <Reveal delay={index * 0.06} className={isFeatured ? "lg:col-span-2" : "lg:col-span-1"}>
+    <Reveal delay={index * 0.06}>
       <motion.div
         whileHover={{ y: -6 }}
         transition={{ type: "spring", stiffness: 260, damping: 22 }}
@@ -103,17 +82,21 @@ function PortfolioCard({ project, index }: { project: (typeof projects)[0]; inde
           {/* Thumbnail */}
           <div className="relative h-52 w-full overflow-hidden">
             <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/50 z-10" />
-            <Image 
+            <Image
               src={project.image}
-              alt={`${project.name} - ${project.industry} system by Tessera Studio`}
+              alt={`${project.name} - ${project.industry} project by Tessera Studio`}
               fill
-              className="object-cover transition-transform duration-700 group-hover:scale-105"
+              className="object-cover object-top transition-transform duration-700 group-hover:scale-105"
             />
 
-            {/* Category pill */}
-            <span className="absolute left-4 top-4 z-20 rounded-full border border-white/[0.12] bg-black/40 px-3 py-1 text-[11px] font-semibold text-white/80 backdrop-blur-xl">
-              {project.tag}
-            </span>
+            {/* Tags row */}
+            <div className="absolute left-4 top-4 z-20 flex flex-wrap gap-1.5">
+              {(project.tags ?? [project.tag]).slice(0, 2).map((t) => (
+                <span key={t} className="rounded-full border border-white/[0.12] bg-black/40 px-3 py-1 text-[11px] font-semibold text-white/80 backdrop-blur-xl">
+                  {t}
+                </span>
+              ))}
+            </div>
           </div>
 
           {/* Info */}
@@ -131,7 +114,7 @@ function PortfolioCard({ project, index }: { project: (typeof projects)[0]; inde
                 </p>
               </div>
               {/* Arrow CTA */}
-              <Link href={project.link}>
+              <Link href={project.link} aria-label={`View ${project.name} project details`}>
                 <motion.div
                   className="flex-shrink-0 flex h-9 w-9 items-center justify-center rounded-full border border-white/[0.12] bg-white/[0.05] text-white/50 transition-all duration-300 group-hover:border-white/30 group-hover:bg-white/[0.1] group-hover:text-white"
                   whileHover={{ scale: 1.1 }}
@@ -151,13 +134,20 @@ function PortfolioCard({ project, index }: { project: (typeof projects)[0]; inde
 
 /* ─── Section ───────────────────────────────────────────────── */
 export function Portfolio() {
-  const featured = projects.filter((p) => p.featured);
-  const rest = projects.filter((p) => !p.featured);
+  const brands = [
+    "Sri Lakshmi Vallabha Constructions",
+    "Chettiar Sweet Stall",
+    "LaunchTable",
+    "Oak & Grain",
+  ];
+  // Repeat exactly twice to match the 8-item structure of the Hero ticker (MarqueeTrust)
+  const baseBrands = [...brands, ...brands];
+  const loopBrands = [...baseBrands, ...baseBrands];
 
   return (
     <section id="portfolio" className="scroll-mt-32 section-padding relative overflow-hidden">
       {/* Background glow */}
-      <div className="absolute inset-x-0 top-1/3 h-[500px] bg-radial-violet opacity-40 blur-3xl pointer-events-none" />
+      <div className="absolute inset-x-0 top-1/3 h-[500px] bg-radial-violet opacity-40 blur-3xl pointer-events-none z-[-1]" />
 
       <div className="site-container relative z-10">
         {/* Heading */}
@@ -173,20 +163,42 @@ export function Portfolio() {
           />
         </Reveal>
 
-        {/* Featured row — 2 cards side by side */}
-        <div className="mt-14 grid grid-cols-1 gap-5 md:grid-cols-2">
-          {featured.map((p, i) => (
+        {/* 3-card grid — equal widths on desktop */}
+        <div className="mt-14 grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
+          {projects.map((p, i) => (
             <PortfolioCard key={p.id} project={p} index={i} />
           ))}
         </div>
+      </div>
 
-        {/* Remaining 3 cards */}
-        <div className="mt-5 grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
-          {rest.map((p, i) => (
-            <PortfolioCard key={p.id} project={p} index={i + featured.length} />
+      {/* Brand marquee — exact MarqueeTrust style, moved outside site-container for full width edge-to-edge layout */}
+      <div className="relative mt-16 overflow-hidden border-y border-white/[0.08] bg-white/[0.025] py-5">
+        {/* Fade edges — matches MarqueeTrust exactly */}
+        <div className="absolute inset-y-0 left-0 z-10 w-28 bg-gradient-to-r from-ink to-transparent" />
+        <div className="absolute inset-y-0 right-0 z-10 w-28 bg-gradient-to-l from-ink to-transparent" />
+        {/* Scrolling track — doubled for seamless loop with GPU hardware acceleration */}
+        <div
+          className="flex w-max animate-marquee gap-4"
+          style={{
+            willChange: "transform",
+            WebkitBackfaceVisibility: "hidden",
+            backfaceVisibility: "hidden",
+            transform: "translate3d(0, 0, 0)",
+          }}
+        >
+          {loopBrands.map((brand, index) => (
+            <div
+              key={index}
+              className="flex items-center gap-4 whitespace-nowrap rounded-full border border-white/[0.08] bg-white/[0.035] px-6 py-3 font-mono text-xs uppercase tracking-[0.2em] text-white/[0.46]"
+            >
+              <span className="h-1.5 w-1.5 rounded-full bg-violet" />
+              {brand}
+            </div>
           ))}
         </div>
+      </div>
 
+      <div className="site-container relative z-10">
         {/* Bottom CTA strip */}
         <Reveal delay={0.35}>
           <div className="mt-12 flex items-center justify-center">
@@ -203,3 +215,5 @@ export function Portfolio() {
     </section>
   );
 }
+
+

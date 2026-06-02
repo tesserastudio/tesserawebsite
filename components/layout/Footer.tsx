@@ -74,7 +74,7 @@ export function Footer() {
             </div>
           </div>
 
-          <div className="grid grid-cols-2 gap-8 sm:grid-cols-3 lg:col-span-2">
+          <div className="grid grid-cols-1 gap-8 sm:grid-cols-3 lg:col-span-2">
             <div>
               <h3 className="font-mono text-xs uppercase tracking-[0.22em] text-white/[0.42]">Navigate</h3>
               <div className="mt-5 grid gap-3 text-sm">

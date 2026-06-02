@@ -122,7 +122,7 @@ export function Hero() {
 
   return (
     <section className="relative min-h-screen overflow-hidden pb-20 pt-36 sm:pt-40">
-      <div className="absolute left-1/2 top-0 h-[36rem] w-[72rem] -translate-x-1/2 rounded-full bg-gradient-to-r from-violet/20 via-electric/15 to-transparent blur-3xl" />
+      <div className="pointer-events-none absolute left-1/2 top-0 h-[36rem] w-[72rem] -translate-x-1/2 rounded-full bg-gradient-to-r from-violet/20 via-electric/15 to-transparent blur-3xl z-[-1]" />
 
       <div className="site-container relative z-10 grid items-center gap-14 lg:grid-cols-[1.02fr_0.98fr]">
         <div>

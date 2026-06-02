@@ -2,6 +2,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { caseStudies, getCaseStudyBySlug } from "@/lib/data";
+import { ScrollToTop } from "@/components/ui/ScrollToTop";
 
 type CaseStudyPageProps = {
   params: { slug: string };
@@ -35,8 +36,9 @@ export default function CaseStudyPage({ params }: CaseStudyPageProps) {
 
   return (
     <section className="section-padding pt-36 sm:pt-40">
+      <ScrollToTop />
       <div className="site-container">
-        <Link href="/work" className="font-mono text-xs uppercase tracking-[0.2em] text-white/[0.46] transition hover:text-white">
+        <Link href="/#portfolio" className="font-mono text-xs uppercase tracking-[0.2em] text-white/[0.46] transition hover:text-white">
           Back to portfolio
         </Link>
 
@@ -78,6 +80,19 @@ export default function CaseStudyPage({ params }: CaseStudyPageProps) {
             </div>
           </div>
         </div>
+
+        {/* Project Image Showcase */}
+        {study.image && (
+          <div className="mt-16 overflow-hidden rounded-[2.5rem] border border-white/[0.08] bg-[#0c0c14] p-2 sm:p-3 shadow-2xl">
+            <div className="relative w-full overflow-hidden rounded-[2rem] border border-white/[0.05] bg-[#07070a]">
+              <img
+                src={study.image}
+                alt={`${study.title} Showcase`}
+                className="w-full h-auto object-contain object-top transition-all duration-700 hover:scale-[1.01]"
+              />
+            </div>
+          </div>
+        )}
 
         <div className="mt-16 overflow-hidden rounded-[2.5rem] border border-white/[0.08] bg-gradient-to-br from-violet/18 via-white/[0.04] to-electric/18 p-6 sm:p-8">
           <div className="rounded-[2rem] border border-white/[0.08] bg-black/35 p-6 sm:p-8">
@@ -124,7 +139,7 @@ export default function CaseStudyPage({ params }: CaseStudyPageProps) {
               Start your project
             </Link>
             <Link
-              href="/work"
+              href="/#portfolio"
               className="rounded-full border border-white/[0.1] px-6 py-3 font-semibold text-white transition hover:bg-white/[0.05]"
             >
               Browse more work

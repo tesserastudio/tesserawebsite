@@ -75,122 +75,138 @@ export const services = [
 
 export const caseStudies = [
   {
-    slug: "urban-nest-realty",
-    title: "Real Estate Co. Website",
-    category: "Web Design",
-    metric: "+62% qualified inquiries",
+    slug: "sri-lakshmi-vallabha-constructions",
+    title: "Sri Lakshmi Vallabha Constructions",
+    category: "Real Estate & Construction",
+    metric: "Trust, clarity and enquiry generation",
     visual: "architecture",
-    image: "/images/portfolio/tessera-studio-website-development-chittoor.png",
-    client: "Urban Nest Realty (Real Estate)",
+    image: "/images/portfolio/slv_portfolio_tsi.png",
+    client: "Sri Lakshmi Vallabha Constructions",
     summary:
-      "A premium real estate website designed in Andhra Pradesh to showcase heritage, amenities, portfolio, digital brochure, and WhatsApp enquiry flow.",
+      "Real-estate construction website designed to improve trust, showcase projects and drive brochure enquiries.",
     overview:
-      "Urban Nest needed a site that matched the trust level of its inventory. We redesigned the positioning, built a cleaner property discovery experience and tightened the inquiry flow for higher-quality lead capture.",
-    services: ["Positioning", "UX design", "Web development", "Lead optimization"],
-    timeline: "3 weeks",
-    stats: [
-      { label: "Qualified inquiries", value: "+62%" },
-      { label: "Average session time", value: "+41%" },
-      { label: "Launch timeline", value: "21 days" }
+      "Sri Lakshmi Vallabha Constructions needed a premium digital presence that could communicate trust, showcase construction quality, and guide interested buyers toward brochure enquiries.",
+    services: [
+      "Premium website UI design",
+      "Responsive website development",
+      "Project showcase structure",
+      "Digital brochure integration",
+      "WhatsApp enquiry flow",
+      "Trust-focused content layout",
+      "Lead-focused CTA placement"
     ],
-    challenge:
-      "The previous site looked generic, buried property highlights and forced serious buyers through a clumsy contact process.",
-    solution:
-      "We introduced editorial property layouts, clearer agent trust cues, faster browsing and a tighter CTA rhythm across listing and landing pages.",
-    outcome:
-      "The business launched with a sharper premium feel and a noticeably better lead mix, with more complete briefs and fewer low-intent inquiries."
-  },
-  {
-    slug: "bloom-table-campaign",
-    title: "Cafe Marketing Campaign",
-    category: "Digital Marketing",
-    metric: "3.8x campaign ROAS",
-    visual: "campaign",
-    image: "/images/portfolio/tessera-studio-cafe-marketing-chittoor.png",
-    client: "Bloom Table Cafe (Restaurant & F&B)",
-    summary:
-      "A localized marketing campaign and responsive café site built to drive weekday traffic and repeat footfall in South India.",
-    overview:
-      "Bloom Table had solid footfall but weak campaign structure. We built a creative system, localized ad messaging and a tighter offer ladder for repeat visits.",
-    services: ["Campaign strategy", "Creative direction", "Paid social", "Offer funnel"],
-    timeline: "4 weeks",
-    stats: [
-      { label: "Campaign ROAS", value: "3.8x" },
-      { label: "Weekday traffic", value: "+27%" },
-      { label: "Returning customers", value: "+19%" }
-    ],
-    challenge:
-      "The cafe had a likeable brand but inconsistent offers, low message-to-offer clarity and ad creative that blended into the feed.",
-    solution:
-      "We restructured the promotions around clear intent buckets, designed punchier creatives and connected campaign timing to in-store behavior.",
-    outcome:
-      "The campaign gave the team a repeatable acquisition system instead of one-off boosts, with healthier weekday demand and better audience retention."
-  },
-  {
-    slug: "orbitstack-launch",
-    title: "Startup Landing Page",
-    category: "Web + Branding",
-    metric: "41% demo conversion lift",
-    visual: "saas",
-    image: "/images/portfolio/tessera-studio-saas-branding-and-design.png",
-    client: "OrbitStack (Startup / SaaS)",
-    summary:
-      "A conversion-focused landing page and modern brand system built for clear product positioning and demo lead capture.",
-    overview:
-      "OrbitStack had a capable product and a fuzzy story. We clarified the value prop, designed a cleaner interface narrative and rebuilt the landing page around demo conversion.",
-    services: ["Messaging", "Brand system", "Landing page design", "Front-end build"],
-    timeline: "2.5 weeks",
-    stats: [
-      { label: "Demo conversion lift", value: "+41%" },
-      { label: "Bounce reduction", value: "-23%" },
-      { label: "Paid readiness", value: "Launch-ready" }
-    ],
-    challenge:
-      "The product page was feature-heavy, visually flat and asked too much interpretation from a cold visitor.",
-    solution:
-      "We reframed the narrative around outcomes, introduced a more distinct visual system and turned the interface into proof instead of decoration.",
-    outcome:
-      "The team launched with clearer positioning, stronger campaign readiness and materially better conversion from visitor to booked demo."
-  },
-  {
-    slug: "always-on-ai-receptionist",
-    title: "AI Receptionist System",
-    category: "AI Automation",
-    metric: "24/7 lead response",
-    visual: "chat",
-    image: "/images/portfolio/tessera-studio-ai-automation-services.png",
-    client: "Northline Clinics (Healthcare)",
-    summary:
-      "An automated AI receptionist and qualified WhatsApp follow-up workflow to handle clinic enquiries 24/7.",
-    overview:
-      "Northline was losing time to manual follow-up and missed evening inquiries. We designed an AI receptionist flow that could respond instantly and escalate cleanly.",
-    services: ["Conversation design", "Automation logic", "CRM workflow", "Ops handoff"],
     timeline: "2 weeks",
     stats: [
-      { label: "Lead response coverage", value: "24/7" },
-      { label: "Manual follow-up load", value: "-58%" },
-      { label: "Qualified handoffs", value: "+34%" }
+      { label: "Enquiry touchpoints", value: "WhatsApp + Brochure" },
+      { label: "Device coverage", value: "Fully responsive" },
+      { label: "Launch timeline", value: "2 weeks" }
     ],
     challenge:
-      "The team was juggling inbound requests across channels, which meant slow response times and incomplete context for follow-up.",
+      "Sri Lakshmi Vallabha Constructions needed a premium digital presence that could communicate trust, showcase construction quality, and guide interested buyers toward brochure enquiries.",
     solution:
-      "We built an AI triage layer with clear qualification rules, a human escalation path and CRM logging that made each lead easier to act on.",
+      "Help visitors understand the brand, explore projects easily, and enquire faster through brochure and WhatsApp CTAs.",
     outcome:
-      "The workflow gave the sales and ops team their evenings back while improving response speed and preserving a polished first-touch experience."
+      "Built a premium real-estate website experience focused on trust, clarity, and enquiry generation."
+  },
+  {
+    slug: "launchtable",
+    title: "LaunchTable",
+    category: "Startup / Community",
+    metric: "21 qualified leads in 3 days",
+    visual: "campaign",
+    image: "/images/portfolio/lt_portfolio_tsi_1.png",
+    client: "LaunchTable",
+    summary:
+      "Community-first digital campaigns crafted to build awareness, attract builders and drive founder engagement.",
+    overview:
+      "LaunchTable needed a clean digital campaign system to build awareness around a founder-first community, communicate the idea clearly and attract the right people to the room.",
+    services: [
+      "Community positioning",
+      "Campaign strategy",
+      "Paid social setup",
+      "Founder-focused creatives",
+      "Lead generation flow",
+      "Audience targeting",
+      "Performance tracking"
+    ],
+    timeline: "3 days",
+    stats: [
+      { label: "Impressions", value: "2,472" },
+      { label: "Reach", value: "1,885" },
+      { label: "Qualified leads", value: "21" }
+    ],
+    challenge:
+      "LaunchTable needed early-stage founder awareness and registrations within a tight budget and a very short launch window, requiring a precise, high-signal campaign framework.",
+    solution:
+      "We built a focused paid social system with founder-first creatives, targeted audience segmentation and a lead generation flow optimised for low-budget, high-intent reach.",
+    outcome:
+      "Created a focused digital campaign presence that helped LaunchTable increase visibility, engagement and community interest — delivering 2,472 impressions, 1,885 reach and 21 qualified leads within a ₹289 total spend."
+  },
+  {
+    slug: "chettiar-sweet-stall",
+    title: "Chettiar Sweet Stall",
+    category: "Traditional Food Brand",
+    metric: "Premium brand transformation",
+    visual: "saas",
+    image: "/images/portfolio/chettiar-landing-page.png",
+    client: "Chettiar Sweet Stall",
+    summary:
+      "Traditional sweets brand reimagined with modern branding and a premium digital presence.",
+    overview:
+      "Traditional sweets brand reimagined with modern branding and a premium digital presence.",
+    services: ["Visual Identity", "Brand Storytelling", "Premium Web Design", "E-commerce Development"],
+    timeline: "2 months",
+    stats: [
+      { label: "Online orders", value: "+41%" },
+      { label: "Bounce reduction", value: "-23%" },
+      { label: "Brand readiness", value: "Launch-ready" }
+    ],
+    challenge:
+      "Chettiar Sweet Stall wanted to scale their traditional heritage brand, requiring a modern visual identity and a premium digital presence to reach a wider audience without losing their cultural roots.",
+    solution:
+      "We reimagined the traditional brand with elegant modern typography, premium packaging visuals, and a clean, responsive e-commerce web experience.",
+    outcome:
+      "Created a cohesive, premium brand presence that blends heritage with modern aesthetics, driving higher engagement and a strong launch-ready digital storefront."
+  },
+  {
+    slug: "medassist-reception-desk",
+    title: "MedAssist Reception Desk",
+    category: "AI Automation",
+    metric: "24/7 patient response",
+    visual: "chat",
+    image: "/images/portfolio/ai-automation.png",
+    client: "MedAssist Clinics",
+    summary:
+      "AI-powered virtual receptionist designed to automate patient enquiries and appointment coordination.",
+    overview:
+      "MedAssist Reception Desk was built as a premium AI-powered virtual receptionist to automate patient enquiries, schedule clinical consultations, and coordinate dynamic appointments 24/7.",
+    services: ["Conversation design", "Automation logic", "CRM workflow", "Ops handoff"],
+    timeline: "1 month",
+    stats: [
+      { label: "Patient coverage", value: "24/7" },
+      { label: "Manual admin load", value: "-58%" },
+      { label: "Triage handoffs", value: "+34%" }
+    ],
+    challenge:
+      "MedAssist Clinics was losing patient inquiries during off-hours, leading to high administrative workload and delayed responses to critical patient bookings.",
+    solution:
+      "We developed a secure, automated AI reception desk with clinical triage logic, calendar integration, and instant WhatsApp support.",
+    outcome:
+      "The Virtual Receptionist successfully automated patient inquiries 24/7, reducing front-desk manual workload by 58% and capturing +34% more qualified bookings."
   },
   {
     slug: "lattice-brand-system",
-    title: "Brand Identity Project",
+    title: "Oak & Grain",
     category: "Branding",
     metric: "Launch-ready visual system",
     visual: "identity",
     image: "/images/portfolio/tessera-studio-brand-identity-system.png",
-    client: "Lattice Atelier (Branding)",
+    client: "Oak & Grain (Branding)",
     summary:
-      "Visual identity system built to establish a premium design brand from day one across web, social, and print assets.",
+      "A modern visual identity crafted with a minimal and timeless design approach.",
     overview:
-      "Lattice Atelier needed a brand system with enough character to feel memorable but enough discipline to scale across channels without getting noisy.",
-    services: ["Identity strategy", "Logo system", "Typography", "Launch toolkit"],
+      "Oak & Grain needed a brand system with enough character to feel memorable but enough discipline to scale across channels without getting noisy.",
+    services: ["Brand Identity", "Logo Design", "Creative Direction"],
     timeline: "3 weeks",
     stats: [
       { label: "Primary brand assets", value: "28" },
@@ -246,24 +262,24 @@ export const processSteps = [
 export const testimonials = [
   {
     quote:
-      "Tessera Studio turned a scattered brand into a premium acquisition machine. The website paid for itself faster than we expected.",
-    name: "Aarav Mehta",
-    company: "Urban Nest Realty",
-    initials: "AM"
+      "Tessera helped us present our projects in a much more premium and organized way online.",
+    name: "Pramod Reddy",
+    company: "Sri Lakshmi Vallabha Constructions",
+    initials: "PR"
   },
   {
     quote:
-      "They gave us the rare combination: tasteful design, fast execution and a marketing system that actually brought leads in.",
-    name: "Nisha Rao",
-    company: "Bloom Table Cafe",
-    initials: "NR"
+      "Tessera understood the vision clearly and helped us build a stronger digital presence around the community.",
+    name: "Pradeep Pragada",
+    company: "LaunchTable",
+    initials: "PP"
   },
   {
     quote:
-      "The AI follow-up workflow changed our sales team overnight. No more missed inquiries, no more manual chasing.",
-    name: "Dev Shah",
-    company: "OrbitStack",
-    initials: "DS"
+      "The branding and website gave our traditional sweet shop a more modern and premium identity.",
+    name: "Raju",
+    company: "Chettiar Sweet Stall",
+    initials: "R"
   }
 ];
 
