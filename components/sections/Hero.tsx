@@ -24,7 +24,7 @@ function AvatarStack() {
         ))}
       </div>
       <p className="text-sm text-white/[0.58]">
-        Trusted by <span className="font-semibold text-white">15+ brands</span>
+        Trusted by <span className="font-semibold text-white">10+ brands</span>
       </p>
     </div>
   );
