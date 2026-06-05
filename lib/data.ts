@@ -231,7 +231,7 @@ export const differentiators = [
 ];
 
 export const stats = [
-  { value: 15, suffix: "+", label: "Brands scaled", decimals: 0 },
+  { value: 10, suffix: "+", label: "Brands scaled", decimals: 0 },
   { value: 3.2, suffix: "x", label: "Average ROI", decimals: 1 },
   { value: 14, suffix: "-day", label: "Average delivery", decimals: 0 }
 ];
