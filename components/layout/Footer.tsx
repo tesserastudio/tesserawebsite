@@ -29,7 +29,7 @@ export function Footer() {
             <Link href="/" className="flex items-center gap-2 md:gap-3" aria-label="Tessera Studio home">
               <Image
                 src={logoImg}
-                alt="Tessera Logo"
+                alt="Tessera Studio Logo"
                 className="h-11 w-11 md:h-12 md:w-12 lg:h-14 lg:w-14 object-contain"
               />
               <span className="font-display text-2xl md:text-3xl font-bold tracking-[-0.05em]">Tessera Studio</span>

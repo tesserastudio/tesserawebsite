@@ -15,7 +15,7 @@ function Logo() {
     <Link href="/" aria-label="Tessera Studio home" className="flex items-center gap-2 md:gap-3">
       <Image
         src={logoImg}
-        alt="Tessera Logo"
+        alt="Tessera Studio Logo"
         className="h-10 w-10 md:h-12 md:w-12 lg:h-14 lg:w-14 object-contain"
         priority
       />

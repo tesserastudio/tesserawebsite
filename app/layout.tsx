@@ -52,7 +52,8 @@ export const metadata: Metadata = {
     images: ["/Tessera new.png"]
   },
   icons: {
-    icon: "/Tessera new.png"
+    icon: "/tessera-favicon.png",
+    apple: "/tessera-favicon.png"
   }
 };
 
